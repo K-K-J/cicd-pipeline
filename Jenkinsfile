@@ -4,6 +4,7 @@ pipeline {
     stage('activity2') {
       steps {
         sh '~/scripts/build.sh'
+        sh 'git clone https://github.com/K-K-J/cicd-pipeline'
       }
     }
 
