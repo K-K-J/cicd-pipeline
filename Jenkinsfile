@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('activity2') {
       steps {
-        sh ' scripts/build.sh'
+        sh ' sudo scripts/build.sh'
       }
     }
 
     stage('activity3') {
       steps {
-        sh '~/scripts/test.sh'
+        sh 'sudo scripts/test.sh'
       }
     }
 
