@@ -14,7 +14,7 @@ pipeline {
     stage('activity2') {
       steps {
         sh '''pwd 
-cd ~/cicd_task/final/scripts/ && ls -la && ./build.sh'''
+cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
         sh '''sudo ~/cicd_task/final/scripts/build.sh
 
 '''
