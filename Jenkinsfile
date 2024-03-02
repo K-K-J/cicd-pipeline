@@ -6,6 +6,7 @@ pipeline {
         sh 'git clone https://github.com/K-K-J/cicd-pipeline ~/cicd_task/final'
         sh ''' cd ~/cicd_task/final
 '''
+        sh 'pwd'
         sh 'ls'
       }
     }
