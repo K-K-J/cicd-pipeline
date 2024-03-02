@@ -45,6 +45,6 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
   }
   environment {
     registry = 'chris703/cicd_jenkins'
-    DOCKERHUB_CREDENTIALS = 'credentials(\'dockerhub\')'
+    DOCKERHUB_CREDENTIALS = 'credentials(\'dockerhub_secret\')'
   }
 }
