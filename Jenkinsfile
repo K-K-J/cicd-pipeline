@@ -13,8 +13,8 @@ pipeline {
 
     stage('activity2') {
       steps {
-        sh 'pwd | ls'
-        sh 'apt  install sudo'
+        sh '''pwd 
+cd /cicd_task/final/scripts/ && ls -la'''
         sh '''sudo ~/cicd_task/final/scripts/build.sh
 
 '''
