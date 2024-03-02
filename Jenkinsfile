@@ -29,8 +29,8 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
 
     stage('activity4') {
       steps {
-        sh 'cd ~/cicd_task/final/'
-        sh 'docker build -t activity#4'
+        sh 'cd ~/cicd_task/final/ && ls'
+        sh 'docker build -t activity#4 .'
       }
     }
 
