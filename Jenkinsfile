@@ -14,7 +14,7 @@ pipeline {
     stage('activity2') {
       steps {
         sh 'pwd | ls'
-        sh 'apt get install sudo'
+        sh 'apt  install sudo'
         sh '''sudo ~/cicd_task/final/scripts/build.sh
 
 '''
