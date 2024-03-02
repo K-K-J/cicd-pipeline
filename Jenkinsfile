@@ -1,17 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage('activity1') {
+    stage('activity1 - github') {
       steps {
         sh 'git clone https://github.com/K-K-J/cicd-pipeline ~/cicd_task/final'
         sh ''' cd ~/cicd_task/final
 '''
         sh 'pwd'
         sh 'ls'
+        sh 'docker login -u '
       }
     }
 
-    stage('activity2') {
+    stage('activity2 - build') {
       steps {
         sh '''pwd 
 cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
@@ -21,20 +22,20 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
       }
     }
 
-    stage('activity3') {
+    stage('activity3 - test') {
       steps {
         sh 'cd ~/cicd_task/final/scripts/ && chmod +x test.sh && ./test.sh'
       }
     }
 
-    stage('activity4') {
+    stage('activity4 - docker build') {
       steps {
         sh 'cd ~/cicd_task/final/ && ls'
         sh 'docker build -t activity4-5 .'
       }
     }
 
-    stage('activity5') {
+    stage('activity5 - docker push') {
       steps {
         sh 'cd ~/cicd_task/final/'
         sh 'sudo docker image tag task4 chris703/task4-5:latest && sudo docker image push chris703/task4-5:latest'
