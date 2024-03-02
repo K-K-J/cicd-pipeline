@@ -8,7 +8,6 @@ pipeline {
 '''
         sh 'pwd'
         sh 'ls'
-        sh 'sudo ./scripts/build.sh'
       }
     }
 
