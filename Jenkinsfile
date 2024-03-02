@@ -13,7 +13,7 @@ pipeline {
 
     stage('activity2') {
       steps {
-        sh 'cd ~/cicd_task/final/scripts/build.sh'
+        sh '/scripts/build.sh'
       }
     }
 
