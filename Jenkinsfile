@@ -30,14 +30,14 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
     stage('activity4') {
       steps {
         sh 'cd ~/cicd_task/final/ && ls'
-        sh 'docker build -t activity#4 .'
+        sh 'docker build -t activity4-5 .'
       }
     }
 
     stage('activity5') {
       steps {
         sh 'cd ~/cicd_task/final/'
-        sh 'docker push chris703/cicd_jenkins:activity#4-5'
+        sh 'docker push chris703/cicd_jenkins:activity4-5'
       }
     }
 
