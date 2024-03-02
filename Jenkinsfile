@@ -37,7 +37,7 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
     stage('activity5') {
       steps {
         sh 'cd ~/cicd_task/final/'
-        sh 'docker push chris703/cicd_jenkins:activity4-5'
+        sh 'sudo docker image tag task4 chris703/task4-5:latest && sudo docker image push chris703/task4-5:latest'
       }
     }
 
