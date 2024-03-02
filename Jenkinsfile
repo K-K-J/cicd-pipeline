@@ -14,7 +14,7 @@ pipeline {
     stage('activity2') {
       steps {
         sh 'pwd | ls'
-        sh '/scripts/build.sh'
+        sh '~/scripts/build.sh'
       }
     }
 
