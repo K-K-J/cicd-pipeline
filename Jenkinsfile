@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('activity1') {
       steps {
-        sh 'git checkout https://github.com/K-K-J/cicd-pipeline --~/cicd_task/final--cicd_task/final'
         sh 'git clone https://github.com/K-K-J/cicd-pipeline ~/cicd_task/final'
         sh ''' cd ~/cicd_task/final
 '''
