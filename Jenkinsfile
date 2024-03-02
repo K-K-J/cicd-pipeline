@@ -23,7 +23,7 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
 
     stage('activity3') {
       steps {
-        sh 'cd ~/cicd_task/final/scripts/test.sh'
+        sh 'cd ~/cicd_task/final/scripts/ && chmod +x test.sh && ./test.sh'
       }
     }
 
