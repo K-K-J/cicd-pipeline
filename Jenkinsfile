@@ -13,24 +13,28 @@ pipeline {
 
     stage('activity2') {
       steps {
+        sh 'cd ~/cicd_task/final/'
         sh './build.sh'
       }
     }
 
     stage('activity3') {
       steps {
+        sh 'cd ~/cicd_task/final/'
         sh './test.sh'
       }
     }
 
     stage('activity4') {
       steps {
+        sh 'cd ~/cicd_task/final/'
         sh 'docker build -t activity#4'
       }
     }
 
     stage('activity5') {
       steps {
+        sh 'cd ~/cicd_task/final/'
         sh 'docker push chris703/cicd_jenkins:activity#4-5'
       }
     }
