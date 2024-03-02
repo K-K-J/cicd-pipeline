@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('activity1 - github clone') {
       steps {
-        sh 'DOCKERHUB_CREDENTIALS=credentials(\'dockerhub\') && sh \'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR\' --password-stdin\' && pwd'
+        sh ' \'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR\' --password-stdin\' && pwd'
         sh 'git clone https://github.com/K-K-J/cicd-pipeline ~/cicd_task/final'
         sh ''' cd ~/cicd_task/final
 '''
@@ -45,5 +45,6 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
   }
   environment {
     registry = 'chris703/cicd_jenkins'
+    DOCKERHUB_CREDENTIALS = 'credentials(\'dockerhub\')'
   }
 }
