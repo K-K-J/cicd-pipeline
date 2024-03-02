@@ -14,10 +14,9 @@ pipeline {
     stage('activity2') {
       steps {
         sh 'pwd | ls'
-        sh '''sudo ~/cicd_task/final/scripts/build.sh
+        sh '''~/cicd_task/final/scripts/build.sh
 
-
-input message: \'enter password\', parameters: [password(defaultValue: \'jenkins123\', description:\'\', name: \'hidden\')]'''
+'''
       }
     }
 
