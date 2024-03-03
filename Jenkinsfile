@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('activity1 - github clone') {
       steps {
-        sh 'echo \'$DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin\' && sudo docker image push chris703/cicd_jenkins:task4-5'
+        sh 'echo \'$DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin\' && sudo docker push chris703/cicd_jenkins:task4-5'
         sh 'git clone https://github.com/K-K-J/cicd-pipeline ~/cicd_task/final'
         sh ''' cd ~/cicd_task/final
 '''
