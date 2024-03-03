@@ -30,7 +30,7 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
     stage('activity4 - docker build') {
       steps {
         sh 'cd ~/cicd_task/final/ && ls'
-        sh 'docker build -t activity4-5 .'
+        sh 'docker build -t 5 .'
       }
     }
 
@@ -38,7 +38,7 @@ cd ~/cicd_task/final/scripts/ && ls -la && chmod +x build.sh && ./build.sh'''
       steps {
         sh 'cd ~/cicd_task/final/'
         sh ' echo \'$DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin\''
-        sh 'sudo docker image tag task4-5 chris703/task4-5:latest && sudo docker push chris703/task4-5:latest'
+        sh 'sudo docker image tag task5 chris703/task5:latest && sudo docker push chris703/task5:latest'
       }
     }
 
